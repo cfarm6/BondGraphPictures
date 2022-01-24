@@ -5,9 +5,9 @@
 \usepackage{circuitikz}
 
 \begin{document}
-    \begin{circuitikz}[]
-        \draw (0,0) to[C,l=$C_2$] (0,3) -- (2,3) to[L,l=$L$] (5,3) -- (7,3) to[R,l=$R$] (9, 3) -- (11, 3) to[C,l=$C_1$] (11, 0) -- (0,0);
-        \draw (11, 3) -- (13, 3) to[R, l = $G_N$] (13, 0) -- (0,0);
+    \begin{circuitikz}[american, voltage shift=0.25]
+        \draw (0,0) to[C,l=$C_2$, v = $V_2$] (0,3) -- (2,3) to[L,l=$L$,i=$I_3$] (5,3) to[R,l=$R$] (7, 3) to[C,l=$C_1$,v=$V_1$] (7, 0) -- (0,0);
+        \draw (7, 3) -- (9, 3) to[R, l = $G_N$] (9, 0) -- (0,0);
         \draw (2, 3) to[R,l=$G$] (2, 0) --(0,0);
     \end{circuitikz}
 \end{document}
